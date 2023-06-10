@@ -35,8 +35,11 @@ const Box = () => {
   }
 
   function handleAccuracy(){
-    const accur  = ((letterCount - mistakeCount)*100)/letterCount;
-    setAccuracy(accur)
+    if(letterCount != 0 ){
+        const accur  = ((letterCount - mistakeCount)*100)/letterCount;
+        setAccuracy(accur)
+    }
+   
   }
 
   useEffect(() => {
